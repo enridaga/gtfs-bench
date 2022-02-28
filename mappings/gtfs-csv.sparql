@@ -210,7 +210,7 @@ CONSTRUCT {
 	
 	# shapes, shapes_points
 	SERVICE <x-sparql-anything:location=datasets/csv/1/SHAPES.csv,csv.headers=true> { 
-		[] xyz:shape_id ?shape_id ; xyz:shape_pt_sequence ?shape_pt_sequence ; xyz:shape_pt_lan ?shape_pt_lan ; xyz:shape_pt_lon ?shape_pt_lon ; xyz:shape_dist_traveled ?shape_dist_traveled .
+		[] xyz:shape_id ?shape_id ; xyz:shape_pt_sequence ?shape_pt_sequence ; xyz:shape_pt_lat ?shape_pt_lat ; xyz:shape_pt_lon ?shape_pt_lon ; xyz:shape_dist_traveled ?shape_dist_traveled .
 		BIND ( fx:entity( "http://transport.linkeddata.es/madrid/metro/shape_point/", ?shape_id ,"-", ?shape_pt_sequence ) AS ?shape_pt_iri )
 		BIND ( xsd:double(?shape_pt_lat) AS ?shape_pt_lat_lt ) .
 		BIND ( xsd:double(?shape_pt_lon) AS ?shape_pt_lon_lt ) .
